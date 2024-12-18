@@ -1,5 +1,6 @@
 let cells = [];
-let ruleValue = 1;
+let ruleValue = 30;
+let ruleSet;
 let w = 5;
 let y = 0;
 
@@ -7,8 +8,10 @@ function setup() {
     createCanvas(600, 400);
     background(220);
 
-    // ruleSet = ruleValue.toString(2);
-    // console.log(ruleSet);
+    ruleSet = ruleValue.toString(2);
+    while (ruleSet.length < 8) {
+        ruleSet = '0' + ruleSet;
+    }
 
     let total = width / w;
     for (let i = 0; i < total; i++) {
@@ -42,10 +45,9 @@ function draw() {
 }
 
 function calculateNewCell(left, state, right) {
-    let ruleSet = [1, 0, 1, 1, 0, 1, 1, 0];
     let neighborhood = '' + left + state + right;
     let value = 7 - parseInt(neighborhood, 2);
-    return ruleSet[value];
+    return parseInt(ruleSet[value]);
 
     // if (left == 1 && state == 1 && right == 1) return 1;
     // if (left == 1 && state == 1 && right == 0) return 0;
