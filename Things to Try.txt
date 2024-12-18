@@ -2,6 +2,19 @@
 (YouTube Video by "The Coding Train", Daniel Shiffman)
 (YouTube Video Name: "Coding Challenge 179: Elementary Cellular Automata")
 
+(Optional)
 Name: Describtion
 
-1. 
+1. What can you do if you think about the CA system in terms of color?
+
+2. What if you invent your own system with more than just two states?
+
+3. What if the states are not discrete values, but continuous floating point numbers?
+
+4. What other things can you do to visualize the CA system?
+
+5. Could you have it be an infinite scroll?
+
+6. Could you have the rules change over time?
+
+7. There's too many possibilities for me to even think of.
