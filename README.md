@@ -1,1 +1,2 @@
-# -TheCodingTrain-Coding-Challenge-179---Elementary-Cellular-Automata
+
+# (TheCodingTrain) Coding Challenge 179: Elementary Cellular Automata
