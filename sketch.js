@@ -1,11 +1,12 @@
 let cells = [];
 let ruleValue = 30;
+// let ruleValue = 110;
 let ruleSet;
 let w = 5;
 let y = 0;
 
 function setup() {
-    createCanvas(600, 400);
+    createCanvas(600, 1800);
     background(220);
 
     ruleSet = ruleValue.toString(2);
@@ -30,11 +31,11 @@ function draw() {
     y += w;
 
     let newCells = [];
-    newCells[0] = cells[0];
-    newCells[cells.length-1] = cells[cells.length-1];
-    for (let i = 1; i < cells.length-1; i++) {
-        let left = cells[i-1];
-        let right = cells[i+1];
+    
+    let len = cells.length;
+    for (let i = 0; i < cells.length; i++) {
+        let left = cells[(i - 1 + len) % len];
+        let right = cells[(i + 1 + len) % len];
         let state = cells[i];
 
         let newState = calculateNewCell(left, state, right);
